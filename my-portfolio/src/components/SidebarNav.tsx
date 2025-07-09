@@ -39,7 +39,7 @@ export default function SidebarNav() {
         const isActive = activeId === id;
 
         return (
-          <a key={id} href={`#${id}`} className={clsx("flex items-center gap-2 cursor-pointer transition-colors duration-300", isActive ? "text-white font-semibold" : "hover:text-teal-400")}>
+          <a key={id} href={`#${id}`} onClick={() => setActiveId(id)} className={clsx("flex items-center gap-2 cursor-pointer transition-colors duration-300", isActive ? "text-white font-semibold" : "hover:text-teal-400")}>
             <span className={clsx("h-1 rounded-full transition-all duration-300 ease-in-out block", isActive ? "w-8 bg-white" : "w-4 bg-gray-500")} />
             {label}
           </a>
