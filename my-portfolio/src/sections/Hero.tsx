@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 function Hero() {
   return (
     <section className="flex flex-col items-start px-6 py-16 lg:px-36">
-      <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="w-full text-teal-400 text-sm">
+      <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="w-full text-gray-400 text-sm">
         안녕하세요, 제 이름은
       </motion.p>
 
