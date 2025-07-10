@@ -2,7 +2,7 @@ import ExperienceCard from "../components/ExperienceCard";
 
 function Experience() {
   return (
-    <section id="experience" className="px-2 py-20">
+    <section id="experience" className="scroll-mt-32 min-h-[50vh] px-2 py-20">
       <div className="space-y-12">
         <ExperienceCard date="2024.09 - 2025.03" title="Frontend Bootcamp - 멋쟁이사자처럼" description="6개월간의 프론트엔드 부트캠프를 통해 JavaScript, React, TypeScript, TailwindCSS 등의 기술을 익혔고, Supabase를 연동한 팀 프로젝트를 통해 개발 경험을 쌓았습니다." />
 
