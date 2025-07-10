@@ -7,7 +7,7 @@ const sections = [
   { id: "projects", label: "Projects" },
 ];
 
-export default function SidebarNav() {
+function SidebarNav() {
   const [activeId, setActiveId] = useState<string>("");
 
   useEffect(() => {
@@ -48,3 +48,5 @@ export default function SidebarNav() {
     </nav>
   );
 }
+
+export default SidebarNav;
