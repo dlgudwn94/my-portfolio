@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import clsx from "clsx";
 
 const sections = [
@@ -7,37 +7,21 @@ const sections = [
   { id: "projects", label: "Projects" },
 ];
 
-function debounce<T extends (...args: any[]) => void>(func: T, delay: number): T {
-  let timeoutId: ReturnType<typeof setTimeout> | null = null;
-
-  return function (...args: any[]) {
-    if (timeoutId) clearTimeout(timeoutId);
-    timeoutId = setTimeout(() => func(...args), delay);
-  } as T;
-}
-
-function SidebarNav() {
+export default function SidebarNav() {
   const [activeId, setActiveId] = useState<string>("");
-  const debouncedSetActiveId = useRef(debounce(setActiveId, 100)).current;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        let maxRatioEntry = null;
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            if (!maxRatioEntry || entry.intersectionRatio > maxRatioEntry.intersectionRatio) {
-              maxRatioEntry = entry;
-            }
-          }
-        });
-        if (maxRatioEntry) {
-          debouncedSetActiveId(maxRatioEntry.target.id);
-        }
+        const visibleEntries = entries.filter((entry) => entry.isIntersecting);
+        if (visibleEntries.length === 0) return;
+
+        const visibleEntry = visibleEntries.sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        setActiveId(visibleEntry.target.id);
       },
       {
-        rootMargin: "-30% 0px -30% 0px",
-        threshold: 0.1,
+        rootMargin: "-40% 0px -55% 0px",
+        threshold: [0, 0.1, 0.5, 1],
       }
     );
 
@@ -47,7 +31,7 @@ function SidebarNav() {
     });
 
     return () => observer.disconnect();
-  }, [debouncedSetActiveId]);
+  }, []);
 
   return (
     <nav className="hidden lg:flex flex-col space-y-6 text-sm text-gray-400 px-6">
@@ -64,5 +48,3 @@ function SidebarNav() {
     </nav>
   );
 }
-
-export default SidebarNav;
