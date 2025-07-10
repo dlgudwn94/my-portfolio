@@ -2,7 +2,6 @@ function Experience() {
   return (
     <section id="experience" className="px-6 py-20">
       <div className="space-y-12">
-        {/* 경력 1 */}
         <div className="grid grid-cols-1 md:grid-cols-[150px_1fr] gap-y-2 md:gap-6 transition-all duration-300 hover:bg-[#1e293b] hover:shadow-lg hover:scale-[1.01] rounded-md">
           <div className=" text-gray-400">2019.06 – 2024.03</div>
           <div>

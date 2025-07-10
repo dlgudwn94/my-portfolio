@@ -34,7 +34,7 @@ export default function SidebarNav() {
   }, []);
 
   return (
-    <nav className="hidden lg:flex flex-col space-y-6 text-sm text-gray-400 md:px-36">
+    <nav className="hidden lg:flex flex-col space-y-6 text-sm text-gray-400 px-6">
       {sections.map(({ id, label }) => {
         const isActive = activeId === id;
 
