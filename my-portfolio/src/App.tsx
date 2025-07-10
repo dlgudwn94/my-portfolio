@@ -9,7 +9,7 @@ import SidebarNav from "./components/SidebarNav";
 
 function App() {
   return (
-    <div className="lg:flex bg-[#0a192f] text-gray-300 font-sans">
+    <div className="mx-auto min-h-screen max-w-screen-xl lg:flex bg-[#0a192f] text-gray-300 font-sans">
       <aside className="w-full lg:w-1/2 lg:h-screen lg:sticky lg:top-0 flex flex-col">
         <div className="hidden lg:block py-12">
           <Hero />
@@ -22,7 +22,7 @@ function App() {
         </div>
       </aside>
 
-      <main className="w-full lg:w-1/2 px-12 py-12 space-y-32">
+      <main className="w-full lg:w-1/2 py-12 space-y-32">
         <div className="block lg:hidden">
           <Hero />
           <Contact />

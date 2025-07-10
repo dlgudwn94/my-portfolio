@@ -7,7 +7,7 @@ function Hero() {
         안녕하세요, 제 이름은
       </motion.p>
 
-      <motion.h1 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="w-full text-4xl md:text-6xl font-bold mt-2 text-left">
+      <motion.h1 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="w-full text-4xl md:text-5xl font-bold mt-2 text-left">
         이형주입니다.
       </motion.h1>
 
