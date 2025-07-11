@@ -29,7 +29,7 @@ function ProjectCard({ title, description, tech, github, live, image }: ProjectC
         </div>
 
         <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
-        <p className="text-gray-300 text-sm mb-4">{description}</p>
+        <p className="text-gray-400 text-sm mb-4">{description}</p>
 
         <div className="flex flex-wrap gap-2">
           {tech?.map((item) => (
