@@ -5,6 +5,6 @@ export const projects = [
     tech: ["React", "TypeScript", "TailwindCSS", "Supabase"],
     github: "https://github.com/FRONTENDBOOTCAMP-12th/Hard-working-6th",
     live: "https://tairo.vercel.app/",
-    image: "src/assets/tAIro.png",
+    image: "/assets/tAIro.png",
   },
 ];
