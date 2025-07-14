@@ -34,17 +34,21 @@ export default function SidebarNav() {
   }, []);
 
   return (
-    <nav className="hidden lg:flex flex-col space-y-6 text-sm text-gray-400 px-6">
-      {sections.map(({ id, label }) => {
-        const isActive = activeId === id;
+    <nav aria-label="섹션 내비게이션" className="hidden lg:flex flex-col text-sm text-gray-400 px-6">
+      <ul className="space-y-6">
+        {sections.map(({ id, label }) => {
+          const isActive = activeId === id;
 
-        return (
-          <a key={id} href={`#${id}`} onClick={() => setActiveId(id)} className={clsx("flex items-center gap-2 cursor-pointer transition-colors duration-300", isActive ? "text-white font-semibold" : "hover:text-teal-400")}>
-            <span className={clsx("h-1 rounded-full transition-all duration-300 ease-in-out block", isActive ? "w-8 bg-white" : "w-4 bg-gray-500")} />
-            {label}
-          </a>
-        );
-      })}
+          return (
+            <li key={id}>
+              <a href={`#${id}`} aria-current={isActive ? "true" : undefined} className={clsx("flex items-center gap-2 cursor-pointer transition-colors duration-300", isActive ? "text-gray-200 font-semibold" : "hover:text-teal-400")}>
+                <span className={clsx("h-1 rounded-full transition-all duration-300 ease-in-out block", isActive ? "w-8 bg-white" : "w-4 bg-gray-500")} />
+                {label}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
     </nav>
   );
 }
