@@ -11,7 +11,7 @@ export const projects = [
     title: "My Portfolio",
     description: "제 개인 포트폴리오 웹사이트입니다. React와 TypeScript을 사용하여 개발하였으며, TailwindCSS로 스타일링을 적용했습니다. 이 프로젝트의 주요 목표는 제 개발 경험과 기술을 효과적으로 보여주는 것입니다. 또한, 반응형 웹 디자인을 적용하여 다양한 화면 크기에서도 최적의 사용자 경험을 제공할 수 있도록 구현했습니다.",
     tech: ["React", "TypeScript", "TailwindCSS"],
-    github: "https://github.com/dlgudwn94/my-portfolio/tree/main/my-portfolio",
+    github: "https://github.com/dlgudwn94/my-portfolio/tree/develop",
     live: "https://hyungju.vercel.app/",
     image: "/assets/my_portfolio_image.png",
   },
