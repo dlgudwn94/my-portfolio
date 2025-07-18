@@ -6,7 +6,7 @@ import Experience from "./sections/Experience";
 import Projects from "./sections/Projects";
 import Footer from "./sections/Footer";
 import SidebarNav from "./components/SidebarNav";
-import Spotlight from "./components/SpotLight";
+import Spotlight from "./components/Spotlight";
 
 function App() {
   return (
