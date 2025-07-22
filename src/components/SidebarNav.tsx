@@ -13,14 +13,14 @@ export default function SidebarNav() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
+        console.log("Entries:", entries);
         const visibleEntries = entries.filter((entry) => entry.isIntersecting);
         if (visibleEntries.length === 0) return;
-
-        const visibleEntry = visibleEntries.sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-        setActiveId(visibleEntry.target.id);
+        const sortedEntries = visibleEntries.sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+        setActiveId(sortedEntries[0].target.id);
       },
       {
-        rootMargin: "-40% 0px -55% 0px",
+        rootMargin: "-20% 0px -60% 0px",
         threshold: [0, 0.1, 0.5, 1],
       }
     );
